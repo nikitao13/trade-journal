@@ -60,7 +60,7 @@ const logTrade = async (ticker, cost, sold) => {
 
 const displayTrades = () => {
   const trades = getLoggedTrades();
-  console.log(chalk.yellow("\n~ logged Trades ~"));
+  console.log(chalk.yellow("\n~ logged trades ~"));
 
   trades.forEach(({ ticker, cost, sold, profit }, index) => {
     console.log(chalk.green.underline(`\ntrade ${index + 1}`));
