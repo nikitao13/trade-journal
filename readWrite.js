@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const DATA_FILE = `./tradeHistory/${process.env.CRYPTO.slice(0, 3)}.json`;
+const DATA_FILE = `./tradeHistory/${process.env.CRYPTO.slice(0, 3) + process.env.CURRENCY}.json`;
 let loggedTrades = [];
 
 export async function loadTrades() {
