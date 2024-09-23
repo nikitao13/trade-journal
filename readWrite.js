@@ -1,7 +1,11 @@
 import fs from 'fs/promises';
 import chalk from 'chalk';
+import dotenv from 'dotenv';
 
-const DATA_FILE = 'trades.json';
+dotenv.config();
+
+
+const DATA_FILE = `./tradeHistory/${process.env.CRYPTO.slice(0,3)}.json`;
 let loggedTrades = [];
 
 export async function loadTrades() {
