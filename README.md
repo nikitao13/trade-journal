@@ -2,7 +2,7 @@
 create a .env file with the following format:
 ```
 CURRENCY=USD
-CRYPTO=BITCOIN
+CRYPTO=SOLANA
 ```
 install packages: 
 ```
