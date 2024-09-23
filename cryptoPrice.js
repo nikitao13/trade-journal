@@ -2,7 +2,7 @@ export default async function getCryptoPrice() {
   const currency = process.env.CURRENCY.toLowerCase();
   const crypto = process.env.CRYPTO.toLowerCase();
   const url = `https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=${currency}`;
-  
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
