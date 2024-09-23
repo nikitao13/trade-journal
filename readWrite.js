@@ -4,14 +4,16 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const DATA_FILE = `./tradeHistory/${process.env.CRYPTO.slice(0, 3) + process.env.CURRENCY}.json`;
+const pair = process.env.CRYPTO.slice(0, 3) + process.env.CURRENCY;
+
+const DATA_FILE = `./tradeHistory/${pair}.json`;
 let loggedTrades = [];
 
 export async function loadTrades() {
   try {
     const data = await fs.readFile(DATA_FILE, "utf8");
     loggedTrades = JSON.parse(data);
-    console.log(chalk.green("trades loaded ~"));
+    console.log(chalk.green(`${pair} trades loaded ~`));
     return loggedTrades;
   } catch (error) {
     if (error.code === "ENOENT") {

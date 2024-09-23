@@ -17,7 +17,7 @@ const config = {
 };
 
 console.log(
-  chalk.green(`[input: ${config.crypto} output: ${config.currency}]`)
+  chalk.green(`[${config.crypto}/${config.currency}]`)
 );
 
 async function calculateProfit(cost, sold) {
